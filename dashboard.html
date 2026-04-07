@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PINTAR Dashboard - Kelola pembelajaran dan reward Anda">
+    <title>Dashboard - PINTAR Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-brand">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">PINTAR</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="header-search">
+                <span class="search-icon">🔍</span>
+                <input type="search" placeholder="Cari kursus, sertifikat..." class="search-input">
+            </div>
+            <button class="notification-btn" aria-label="Notifications">
+                <span class="notification-icon">🔔</span>
+                <span class="notification-badge">3</span>
+            </button>
+            <div class="user-menu">
+                <button class="user-btn" id="userMenuBtn" aria-label="User menu">
+                    <div class="user-avatar">👤</div>
+                    <div class="user-info">
+                        <span class="user-name">Ahmad Rizki</span>
+                        <span class="user-role">Siswa</span>
+                    </div>
+                    <span class="dropdown-icon">▼</span>
+                </button>
+                <div class="user-dropdown" id="userDropdown">
+                    <a href="#" class="dropdown-item">
+                        <span>👤</span> Profil Saya
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <span>⚙️</span> Pengaturan
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <span>💳</span> Wallet Saya
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="login.html" class="dropdown-item">
+                        <span>🚪</span> Keluar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active">
+                    <span class="sidebar-icon">📊</span>
+                    <span class="sidebar-text">Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="sidebar-icon">📚</span>
+                    <span class="sidebar-text">Kursus Saya</span>
+                    <span class="sidebar-badge">12</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="sidebar-icon">💰</span>
+                    <span class="sidebar-text">Learn Wallet</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="sidebar-icon">🎓</span>
+                    <span class="sidebar-text">Kredensial</span>
+                    <span class="sidebar-badge">5</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="sidebar-icon">🏆</span>
+                    <span class="sidebar-text">Prestasi</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="sidebar-icon">💸</span>
+                    <span class="sidebar-text">Beasiswa</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span class="sidebar-icon">👥</span>
+                    <span class="sidebar-text">Peer Learning</span>
+                </a>
+                
+                <div class="sidebar-divider"></div>
+                
+                <div class="sidebar-section">
+                    <span class="sidebar-section-title">Lainnya</span>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">📖</span>
+                        <span class="sidebar-text">Library</span>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">❓</span>
+                        <span class="sidebar-text">Bantuan</span>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">⚙️</span>
+                        <span class="sidebar-text">Pengaturan</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="dashboard-content">
+                <!-- Welcome Section -->
+                <section class="welcome-section">
+                    <h1>Selamat Datang Kembali, Ahmad! 👋</h1>
+                    <p>Anda telah menyelesaikan 8 dari 12 kursus minggu ini. Terus semangat!</p>
+                </section>
+
+                <!-- Stats Overview -->
+                <section class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-card primary">
+                            <div class="stat-icon">💰</div>
+                            <div class="stat-content">
+                                <div class="stat-value">2,450</div>
+                                <div class="stat-label">$PINTAR Tokens</div>
+                                <div class="stat-change positive">
+                                    <span>↑</span> +350 minggu ini
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card success">
+                            <div class="stat-icon">📚</div>
+                            <div class="stat-content">
+                                <div class="stat-value">87%</div>
+                                <div class="stat-label">Progress Kursus</div>
+                                <div class="stat-change positive">
+                                    <span>↑</span> +12% dari bulan lalu
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card warning">
+                            <div class="stat-icon">🎓</div>
+                            <div class="stat-content">
+                                <div class="stat-value">5</div>
+                                <div class="stat-label">Sertifikat Diperoleh</div>
+                                <div class="stat-change neutral">
+                                    <span>→</span> 2 dalam review
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card info">
+                            <div class="stat-icon">🔥</div>
+                            <div class="stat-content">
+                                <div class="stat-value">15</div>
+                                <div class="stat-label">Hari Streak</div>
+                                <div class="stat-change positive">
+                                    <span>↑</span> Rekor baru!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Two Column Layout -->
+                <div class="dashboard-grid">
+                    <!-- Left Column -->
+                    <div class="dashboard-column">
+                        <!-- Active Courses -->
+                        <section class="dashboard-section">
+                            <div class="section-header">
+                                <h2>Kursus Aktif</h2>
+                                <a href="#" class="section-link">Lihat Semua</a>
+                            </div>
+                            <div class="course-list">
+                                <div class="course-item">
+                                    <div class="course-icon">💻</div>
+                                    <div class="course-info">
+                                        <h3>Pemrograman Python Dasar</h3>
+                                        <p>Bab 8 dari 12 • 45 menit tersisa</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 67%"></div>
+                                        </div>
+                                    </div>
+                                    <button class="course-action">Lanjutkan</button>
+                                </div>
+                                <div class="course-item">
+                                    <div class="course-icon">📊</div>
+                                    <div class="course-info">
+                                        <h3>Matematika Kelas 11</h3>
+                                        <p>Bab 3 dari 10 • 2 jam tersisa</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 30%"></div>
+                                        </div>
+                                    </div>
+                                    <button class="course-action">Lanjutkan</button>
+                                </div>
+                                <div class="course-item">
+                                    <div class="course-icon">🎨</div>
+                                    <div class="course-info">
+                                        <h3>Desain Grafis dengan Figma</h3>
+                                        <p>Bab 10 dari 10 • Quiz final</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <button class="course-action">Selesaikan</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Recent Achievements -->
+                        <section class="dashboard-section">
+                            <div class="section-header">
+                                <h2>Pencapaian Terbaru</h2>
+                                <a href="#" class="section-link">Lihat Semua</a>
+                            </div>
+                            <div class="achievement-list">
+                                <div class="achievement-item">
+                                    <div class="achievement-badge gold">🏆</div>
+                                    <div class="achievement-info">
+                                        <h4>First 100 Courses</h4>
+                                        <p>Menyelesaikan 100 kursus pertama</p>
+                                        <span class="achievement-date">2 hari yang lalu</span>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-badge silver">🎖️</div>
+                                    <div class="achievement-info">
+                                        <h4>Python Master</h4>
+                                        <p>Menguasai pemrograman Python</p>
+                                        <span class="achievement-date">1 minggu yang lalu</span>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-badge bronze">🥉</div>
+                                    <div class="achievement-info">
+                                        <h4>Consistent Learner</h4>
+                                        <p>Belajar 7 hari berturut-turut</p>
+                                        <span class="achievement-date">2 minggu yang lalu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="dashboard-column">
+                        <!-- Wallet Overview -->
+                        <section class="dashboard-section wallet-section">
+                            <div class="section-header">
+                                <h2>Learn Wallet</h2>
+                                <a href="#" class="section-link">Kelola</a>
+                            </div>
+                            <div class="wallet-card">
+                                <div class="wallet-balance">
+                                    <span class="wallet-label">Total Balance</span>
+                                    <div class="wallet-amount">
+                                        <span class="wallet-value">2,450</span>
+                                        <span class="wallet-currency">$PINTAR</span>
+                                    </div>
+                                    <span class="wallet-usd">≈ Rp 735,000</span>
+                                </div>
+                                <div class="wallet-actions">
+                                    <button class="wallet-btn primary">💸 Withdraw</button>
+                                    <button class="wallet-btn secondary">📊 Riwayat</button>
+                                </div>
+                            </div>
+                            
+                            <div class="reward-history">
+                                <h4>Reward Terbaru</h4>
+                                <div class="reward-item">
+                                    <div class="reward-icon">✓</div>
+                                    <div class="reward-info">
+                                        <span class="reward-action">Menyelesaikan Quiz</span>
+                                        <span class="reward-course">Python Dasar - Bab 8</span>
+                                    </div>
+                                    <div class="reward-amount">+20</div>
+                                </div>
+                                <div class="reward-item">
+                                    <div class="reward-icon">✓</div>
+                                    <div class="reward-info">
+                                        <span class="reward-action">Menyelesaikan Video</span>
+                                        <span class="reward-course">Matematika Kelas 11</span>
+                                    </div>
+                                    <div class="reward-amount">+10</div>
+                                </div>
+                                <div class="reward-item">
+                                    <div class="reward-icon">✓</div>
+                                    <div class="reward-info">
+                                        <span class="reward-action">Peer Teaching</span>
+                                        <span class="reward-course">Membantu 3 teman</span>
+                                    </div>
+                                    <div class="reward-amount">+30</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Upcoming Schedule -->
+                        <section class="dashboard-section">
+                            <div class="section-header">
+                                <h2>Jadwal Mendatang</h2>
+                            </div>
+                            <div class="schedule-list">
+                                <div class="schedule-item">
+                                    <div class="schedule-time">
+                                        <span class="schedule-hour">14:00</span>
+                                        <span class="schedule-date">Hari ini</span>
+                                    </div>
+                                    <div class="schedule-info">
+                                        <h4>Live Session: Python Q&A</h4>
+                                        <p>Dengan Pak Budi Santoso</p>
+                                    </div>
+                                </div>
+                                <div class="schedule-item">
+                                    <div class="schedule-time">
+                                        <span class="schedule-hour">10:00</span>
+                                        <span class="schedule-date">Besok</span>
+                                    </div>
+                                    <div class="schedule-info">
+                                        <h4>Quiz: Matematika Bab 3</h4>
+                                        <p>Deadline submission</p>
+                                    </div>
+                                </div>
+                                <div class="schedule-item">
+                                    <div class="schedule-time">
+                                        <span class="schedule-hour">15:30</span>
+                                        <span class="schedule-date">Jum'at</span>
+                                    </div>
+                                    <div class="schedule-info">
+                                        <h4>Webinar: Design Thinking</h4>
+                                        <p>Special Guest Speaker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Quick Stats -->
+                        <section class="dashboard-section">
+                            <div class="section-header">
+                                <h2>Statistik Pembelajaran</h2>
+                            </div>
+                            <div class="quick-stats">
+                                <div class="quick-stat-item">
+                                    <div class="quick-stat-label">Jam Belajar Minggu Ini</div>
+                                    <div class="quick-stat-value">12.5 jam</div>
+                                </div>
+                                <div class="quick-stat-item">
+                                    <div class="quick-stat-label">Quiz Completion Rate</div>
+                                    <div class="quick-stat-value">92%</div>
+                                </div>
+                                <div class="quick-stat-item">
+                                    <div class="quick-stat-label">Ranking Kelas</div>
+                                    <div class="quick-stat-value">#3 dari 156</div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Table -->
+                <section class="dashboard-section full-width">
+                    <div class="section-header">
+                        <h2>Aktivitas Terbaru</h2>
+                        <a href="#" class="section-link">Lihat Semua</a>
+                    </div>
+                    <div class="activity-table-wrapper">
+                        <table class="activity-table">
+                            <thead>
+                                <tr>
+                                    <th>Aktivitas</th>
+                                    <th>Kursus</th>
+                                    <th>Tanggal</th>
+                                    <th>Reward</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="activity-cell">
+                                            <span class="activity-icon">📝</span>
+                                            <span>Menyelesaikan Quiz</span>
+                                        </div>
+                                    </td>
+                                    <td>Python Dasar - Bab 8</td>
+                                    <td>Hari ini, 10:30</td>
+                                    <td><span class="reward-badge">+20 $PINTAR</span></td>
+                                    <td><span class="status-badge success">Selesai</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="activity-cell">
+                                            <span class="activity-icon">🎥</span>
+                                            <span>Menonton Video</span>
+                                        </div>
+                                    </td>
+                                    <td>Matematika Kelas 11</td>
+                                    <td>Kemarin, 15:45</td>
+                                    <td><span class="reward-badge">+10 $PINTAR</span></td>
+                                    <td><span class="status-badge success">Selesai</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="activity-cell">
+                                            <span class="activity-icon">👥</span>
+                                            <span>Peer Teaching</span>
+                                        </div>
+                                    </td>
+                                    <td>Membantu 3 teman</td>
+                                    <td>Kemarin, 14:20</td>
+                                    <td><span class="reward-badge">+30 $PINTAR</span></td>
+                                    <td><span class="status-badge success">Selesai</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="activity-cell">
+                                            <span class="activity-icon">📚</span>
+                                            <span>Memulai Kursus Baru</span>
+                                        </div>
+                                    </td>
+                                    <td>Desain Grafis dengan Figma</td>
+                                    <td>2 hari lalu</td>
+                                    <td>-</td>
+                                    <td><span class="status-badge progress">Berlangsung</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="activity-cell">
+                                            <span class="activity-icon">🎓</span>
+                                            <span>Mendapat Sertifikat</span>
+                                        </div>
+                                    </td>
+                                    <td>Web Development Fundamentals</td>
+                                    <td>3 hari lalu</td>
+                                    <td><span class="reward-badge">+50 $PINTAR</span></td>
+                                    <td><span class="status-badge success">Selesai</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
